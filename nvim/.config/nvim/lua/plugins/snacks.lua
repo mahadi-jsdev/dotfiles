@@ -14,8 +14,7 @@ return {
 		scope = {},
 		input = {},
 		notifier = {},
-		terminal = {},
-		-- dashboard = {},
+		indent = {},
 	},
 	keys = {
 		{
@@ -33,7 +32,7 @@ return {
 			desc = "buffers",
 		},
 		{
-			"<C-/>",
+			"<C-f>",
 			function()
 				Snacks.picker.grep()
 			end,
@@ -41,20 +40,12 @@ return {
 			mode = { "n" },
 		},
 		{
-			"<C-/>",
+			"<C-f>",
 			function()
 				Snacks.picker.grep_word()
 			end,
 			desc = "Visual selection or word",
 			mode = { "x" },
-		},
-		{
-			"<C-f>",
-			function()
-				Snacks.picker.lines()
-			end,
-			desc = "Grep",
-			mode = { "n" },
 		},
 		{
 			"<C-g>",
@@ -69,14 +60,6 @@ return {
 				Snacks.bufdelete()
 			end,
 			desc = "Delete Buffer",
-		},
-		{
-			"<C-`>",
-			function()
-				Snacks.terminal()
-			end,
-			mode = { "n", "t" },
-			desc = "Toggle Terminal",
 		},
 	},
 }
