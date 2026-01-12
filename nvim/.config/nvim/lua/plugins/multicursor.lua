@@ -1,5 +1,6 @@
 return {
 	"jake-stewart/multicursor.nvim",
+	event = "BufRead",
 	branch = "1.0",
 	config = function()
 		local map = vim.keymap.set

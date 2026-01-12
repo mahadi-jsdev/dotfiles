@@ -15,6 +15,8 @@ return {
 		input = {},
 		notifier = {},
 		indent = {},
+		explorer = {},
+		dashboard = {},
 	},
 	keys = {
 		{
@@ -30,6 +32,13 @@ return {
 				Snacks.picker.buffers()
 			end,
 			desc = "buffers",
+		},
+		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "explorer",
 		},
 		{
 			"<C-f>",
