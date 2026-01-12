@@ -17,6 +17,7 @@ return {
 		indent = {},
 		explorer = {},
 		dashboard = {},
+		scratch = {},
 	},
 	keys = {
 		{
