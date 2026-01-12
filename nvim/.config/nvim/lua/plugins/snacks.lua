@@ -26,13 +26,13 @@ return {
 			end,
 			desc = "search files",
 		},
-		-- {
-		-- 	"<C-space>",
-		-- 	function()
-		-- 		Snacks.picker.buffers()
-		-- 	end,
-		-- 	desc = "buffers",
-		-- },
+		{
+			"<C-space>",
+			function()
+				Snacks.picker.buffers()
+			end,
+			desc = "buffers",
+		},
 		{
 			"<leader>e",
 			function()
