@@ -57,19 +57,19 @@ background = "0x264F78"
 size = 13
 
 [font.normal]
-family = "Jetbrains Mono"
+family = "Jetbrains Mono Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "Jetbrains Mono"
+family = "Jetbrains Mono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "Jetbrains Mono"
+family = "Jetbrains Mono Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "Jetbrains Mono"
+family = "Jetbrains Mono Nerd Font"
 style = "Bold Italic"
 
 [selection]
