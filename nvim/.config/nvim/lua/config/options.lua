@@ -25,16 +25,17 @@ opt.swapfile = false
 opt.backup = false
 opt.writebackup = false
 opt.autoread = true
+opt.conceallevel = 2
 
 -- Diagnostics appearance
 vim.diagnostic.config({
-	virtual_text = true,
-	signs = false,
-	underline = true,
-	update_in_insert = false,
-	severity_sort = true,
-	float = {
-		border = "rounded",
-		source = "always",
-	},
+  virtual_text = true,
+  signs = false,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = "always",
+  },
 })
