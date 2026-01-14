@@ -1,30 +1,26 @@
 return {
-  "stevearc/oil.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  "mikavilpas/yazi.nvim",
+  version = "*", -- use the latest stable version
   event = "VeryLazy",
+  dependencies = {
+    { "nvim-lua/plenary.nvim", lazy = true },
+  },
   keys = {
     {
       "-",
-      mode = { "n" },
-      function() require("oil").open() end,
-      desc = "Open parent directory in Oil",
+      mode = { "n", "v" },
+      "<cmd>Yazi<cr>",
+      desc = "Open yazi at the current file",
     },
   },
   opts = {
-    -- Optional: set to true to replace netrw completely
-    default_file_explorer = true,
-    view_options = {
-      show_hidden = true,
-    },
+    open_for_directories = true,
   },
   init = function()
-    -- Disable netrw
-    vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
 
     -- Folders only function
     local function folders_only()
-      -- Note: ensured compatibility with 'fd' or 'fdfind'
       local fd_cmd = "fdfind --type d --hidden --exclude .git"
       local fd_handle = io.popen(fd_cmd)
       local results = {}
@@ -38,15 +34,15 @@ return {
         fd_handle:close()
       end
 
-      -- Add project root (cwd) at the very top
+      -- add project root (cwd) at the very top
       local cwd = vim.fn.getcwd()
       table.insert(results, 1, {
         path = cwd,
-        display = " [root] -> " .. cwd,
+        display = "root",
       })
 
       vim.ui.select(results, {
-        prompt = "Select folder to open in Oil:",
+        prompt = "Folders:",
         format_item = function(item)
           return item.display
         end,
@@ -55,15 +51,16 @@ return {
           return
         end
 
-        -- Oil opens paths via the standard command
-        vim.cmd("Oil " .. selected.path)
+        require("yazi").yazi({}, selected.path)
       end)
     end
 
     -- Set up key mapping for folders only
-    vim.keymap.set("n", "<C-e>", folders_only, {
+    vim.api.nvim_set_keymap("n", "<C-e>", "", {
+      noremap = true,
       silent = true,
-      desc = "Folders only (Oil compatible)",
+      desc = "Folders only (Yazi compatible)",
+      callback = folders_only,
     })
   end,
 }
