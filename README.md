@@ -1,4 +1,3 @@
-󱔗 My Dotfiles
 
 A high-performance terminal development environment for CachyOS (COSMIC Desktop). This repository uses GNU Stow to manage configurations for Tmux, Neovim, and Alacritty.
 📦 Requirements
