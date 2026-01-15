@@ -1,8 +1,9 @@
 return {
-	"Mofiqul/vscode.nvim",
-	priority = 1000,
-	lazy = false,
-	config = function()
-		vim.cmd.colorscheme("vscode")
-	end,
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+  config = function()
+    vim.cmd [[colorscheme tokyonight-night]]
+  end
 }
