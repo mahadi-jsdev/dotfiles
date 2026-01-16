@@ -18,7 +18,8 @@ return {
     explorer = {},
     dashboard = {},
     scratch = {},
-    image = {}
+    image = {},
+    terminal = {}
   },
   keys = {
     {
@@ -72,5 +73,21 @@ return {
       end,
       desc = "Delete Buffer",
     },
+    {
+      "<C-t>",
+      function()
+        Snacks.terminal.toggle()
+      end,
+      desc = "toggle terminal",
+      mode = { "n" }
+    },
+    {
+      "<C-t>",
+      function()
+        Snacks.terminal.toggle()
+      end,
+      desc = "toggle terminal",
+      mode = { "t" }
+    }
   },
 }
