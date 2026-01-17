@@ -74,7 +74,7 @@ return {
       desc = "Delete Buffer",
     },
     {
-      "<C-t>",
+      "<C-`>",
       function()
         Snacks.terminal.toggle()
       end,
@@ -82,7 +82,7 @@ return {
       mode = { "n" }
     },
     {
-      "<C-t>",
+      "<C-`>",
       function()
         Snacks.terminal.toggle()
       end,
