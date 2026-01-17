@@ -26,6 +26,8 @@ opt.backup = false
 opt.writebackup = false
 opt.autoread = true
 opt.conceallevel = 2
+vim.g.loaded_netrwPlugin = 1
+
 
 -- Diagnostics appearance
 vim.diagnostic.config({

@@ -1,6 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
+  event = "BufRead",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     -- Modern LSP client detector (Neovim 0.10/0.11+ compatible)

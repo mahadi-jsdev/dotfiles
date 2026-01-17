@@ -17,8 +17,6 @@ return {
     open_for_directories = true,
   },
   init = function()
-    vim.g.loaded_netrwPlugin = 1
-
     -- Folders only function
     local function folders_only()
       local fd_cmd = "fdfind --type d --hidden --exclude .git"
